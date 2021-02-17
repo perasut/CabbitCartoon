@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1090783323376",
+    "project_id": "cabbitcartoon",
+    "storage_bucket": "cabbitcartoon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090783323376:android:8d767bc6e4e394984d4e35",
+        "android_client_info": {
+          "package_name": "com.cabbitcool.cabbitCatoon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090783323376-njkpt2lvtmrq3scn5jspcltg4p6p66ok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkVPHp0Q6XbpiXxb1tpf_KR8YVh2xLatc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090783323376-njkpt2lvtmrq3scn5jspcltg4p6p66ok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

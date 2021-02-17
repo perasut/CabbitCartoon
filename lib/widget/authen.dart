@@ -15,18 +15,57 @@ class _AuthenState extends State<Authen> {
   Widget build(BuildContext context) {
     screen = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Titlesssss'),
+      floatingActionButton: buildRegister(),
+      // appBar: AppBar(
+      //     // title: Text('Titlesssss'),
+      //     ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+              center: Alignment(0, -0.33),
+              radius: 1.5,
+              colors: <Color>[Colors.white, MyStyle().primaryColor]),
+        ),
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                buildLogo(),
+                MyStyle().titleH1('Cabbit Cartoon'),
+                buildUser(),
+                buildPassword(),
+                buildLogin()
+              ],
+            ),
+          ),
+        ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            buildLogo(),
-            MyStyle().titleH1('Cabbit Cartoon'),
-            buildUser(),
-            buildPassword(),
-          ],
+    );
+  }
+
+  TextButton buildRegister() {
+    return TextButton(
+      onPressed: () => Navigator.pushNamed(context, '/register'),
+      child: Text(
+        'New Register',
+        style: TextStyle(color: Colors.white),
+      ),
+    );
+  }
+
+  Container buildLogin() {
+    return Container(
+      margin: EdgeInsets.only(top: 15),
+      width: screen * 0.75,
+      child: ElevatedButton(
+        onPressed: () {},
+        child: Text('Login'),
+        style: ElevatedButton.styleFrom(
+          primary: MyStyle().darkColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
         ),
       ),
     );
@@ -34,6 +73,10 @@ class _AuthenState extends State<Authen> {
 
   Container buildUser() {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Colors.white54,
+      ),
       margin: EdgeInsets.only(top: 16),
       width: screen * 0.75,
       child: TextField(
@@ -49,7 +92,7 @@ class _AuthenState extends State<Authen> {
               borderRadius: BorderRadius.circular(25),
               borderSide: BorderSide(color: MyStyle().darkColor)),
           focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),   
+              borderRadius: BorderRadius.circular(25),
               borderSide: BorderSide(color: MyStyle().lightColor)),
         ),
       ),
@@ -58,6 +101,10 @@ class _AuthenState extends State<Authen> {
 
   Container buildPassword() {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Colors.white54,
+      ),
       margin: EdgeInsets.only(top: 16),
       width: screen * 0.75,
       child: TextField(
@@ -67,7 +114,7 @@ class _AuthenState extends State<Authen> {
           suffixIcon: IconButton(
               icon: statusRedEye
                   ? Icon(Icons.remove_red_eye)
-                  : Icon(Icons.remove_circle),
+                  : Icon(Icons.remove_red_eye_outlined),
               onPressed: () {
                 setState(() {
                   statusRedEye = !statusRedEye;
