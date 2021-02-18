@@ -27,12 +27,30 @@ class MyStyle {
         ),
       );
 
+  Widget titleH2White(String string) => Text(
+        string,
+        style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w500,
+          color: Colors.white,
+        ),
+      );
+
   Widget titleH3(String string) => Text(
         string,
         style: TextStyle(
           fontSize: 16,
           // fontWeight: FontWeight.bold,
           color: darkColor,
+        ),
+      );
+
+  Widget titleH3White(String string) => Text(
+        string,
+        style: TextStyle(
+          fontSize: 16,
+          // fontWeight: FontWeight.bold,
+          color: Colors.white54,
         ),
       );
   MyStyle();
