@@ -5,6 +5,11 @@ class MyStyle {
   Color primaryColor = Color(0xff4825b2);
   Color lightColor = Color(0xff7e52e5);
 
+  BoxDecoration boxDecoration() => BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white60,
+      );
+
   TextStyle redBoldStyle() =>
       TextStyle(color: Colors.red.shade700, fontWeight: FontWeight.bold);
 
